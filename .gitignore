@@ -17,3 +17,5 @@ Thumbs.db
 *.pkl
 *.h5
 *.joblib
+
+main.py

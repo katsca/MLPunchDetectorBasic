@@ -15,12 +15,14 @@ level = 0.5  # 1 technque every 2 second
 
 
 def generate_punch(T):
+    
     # Generate random number from 1 to 6
     punch_int = random.randint(1, 6)
     print(punch_int)
 
     # Generate new target time for next punch
     target_time = level + np.random.normal(0, 0.8, 1)
+    
     # Reset time to T
     T = 0
     return punch_int, target_time, T

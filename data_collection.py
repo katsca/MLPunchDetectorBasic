@@ -32,13 +32,14 @@ for i, punch in enumerate(punch_types):
 
 while cap.isOpened():
     ret, frame = cap.read()
+    
     # If not recording then just quit
     if not ret:
         break
-    # ELSE
 
     # Display the current punch type
     frame = cv2.flip(frame, 1)  # Flip horizontally for a mirror effect
+    
     # If recording
     if punch_label is not None:
         cv2.putText(

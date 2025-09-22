@@ -18,15 +18,14 @@ punches_name = {
 with open("punch_model.pkl", "rb") as file:
     model = pickle.load(file)
 
-
-# Initialize MediaPipe Pose
+# Initialize MediaPipe Pose9
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0)
-
+print("Start")
 
 while True:
     ret, frame = cap.read()  # Capture frame from webcam
@@ -85,3 +84,4 @@ while True:
 # Release the webcam and close any OpenCV windows
 cap.release()
 cv2.destroyAllWindows()
+print("End")
