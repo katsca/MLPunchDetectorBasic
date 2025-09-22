@@ -15,7 +15,7 @@ punches_name = {
 }
 
 # Load your trained model (make sure to pickle it after training!)
-with open("punch_model.pkl", "rb") as file:
+with open("models\punch_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 # Initialize MediaPipe Pose9

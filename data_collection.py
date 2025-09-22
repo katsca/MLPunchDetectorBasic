@@ -106,7 +106,7 @@ cv2.destroyAllWindows()
 
 # Save collected data to CSV
 print(f"Collected {frame_count} frames of data.")
-with open("punch_data_to_save.csv", "w", newline="") as f:
+with open("data\punch_data_to_save.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(data)
 print("Data saved to punch_data_to_save.csv")

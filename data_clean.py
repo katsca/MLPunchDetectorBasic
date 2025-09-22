@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 # EXTRACT OUR DATA
-data = pd.read_csv("punch_data.csv", header=None)
+data = pd.read_csv("data\punch_data.csv", header=None)
 print(data.head())
 X_raw = data.drop(0, axis=1).values
 y = data[0].values  # Labels (punch types)
@@ -60,5 +60,5 @@ print(f"Mean Accuracy: {cv_scores.mean() * 100:.2f}%")
 
 
 # Save the trained model to a file using pickle
-with open("punch_model.pkl", "wb") as file:
+with open("models\punch_model.pkl", "wb") as file:
     pickle.dump(rf_model, file)
